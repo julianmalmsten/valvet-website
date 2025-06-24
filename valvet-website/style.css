@@ -1,0 +1,147 @@
+
+@font-face {
+  font-family: 'ValvetFont';
+  src: url('assets/Assets/Fonts/Kurdis-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ValvetFontBold';
+  src: url('assets/Assets/Fonts/Kurdis-WideBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'ValvetFont', 'ValvetFontBold', sans-serif;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 12px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  height: 24px;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+.social-icon svg,
+.social-icon .fa {
+  fill: white;
+  color: white;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+
+header {
+    margin: 0;
+    font-family: 'ValvetFont', 'ValvetFontBold', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #000 100%),
+              url('images/Utvalda/DSCF4435.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 100vh;
+    padding: 0px;
+    position: static;
+    top: 0;
+  }
+  
+  
+  
+  .main-heading{
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  
+  .main-heading h1{
+    font-size: 50px;
+    font-family: 'ValvetFontBold';
+  }
+
+  .main-heading p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+
+  .header img {
+    width: 200px;
+    padding-top: 7px;
+  }
+
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+  .merch-button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: white;
+    border-width: 2px;
+  }
+
+  .merch-button:hover {
+    background-color: #e5c045;
+    color: black;
+    cursor: pointer;
+  }
+
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 !important;
+  }
+
+  .header-right {
+    float: right;
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+  }
+
+footer {
+    margin: 0;
+    background-color: #e5c045;
+    color: white;
+}
