@@ -4,47 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Valvet</title>
+  <link rel="icon" type="image/png" href="assets/Adobe Express - file.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<header>
+  <header>
     <div class="header">
-      <a href="#" class="logo"><img src="assets/Assets/Logotype/Valvet - Brand Book - Logotype White.png" alt="Valvet logotyp"></a>
-      <div class="header-right">
-        <a href="https://instagram.com/valvet_music" target="_blank" class="fa fa-instagram"></a>
-        <a href="https://www.tiktok.com/@valvet_music" target="_blank" class="social-icon tiktok">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24">
-            <path d="M224 80.1c-19.6 0-36.8-11.2-45.3-27.5v88.5c0 39.7-32.2 71.9-71.9 71.9S35 180.8 35 141.1s32.2-71.9 71.9-71.9c3.8 0 7.6.3 11.2 1v27.7c-3.6-.9-7.4-1.4-11.2-1.4-24.5 0-44.4 19.9-44.4 44.4s19.9 44.4 44.4 44.4 44.4-19.9 44.4-44.4V32.2h27.5c5.7 26.2 28.8 45.9 56.2 45.9V80.1z" fill="white"/>
-          </svg>
-        </a>
-        
-        <a href="https://youtube.com/@valvet_music" target="_blank" class="fa fa-youtube"></a>
-        <a href="mailto:valvetbandet@gmail.com" class="fa fa-envelope"></a>
-        <!-- Navigationslänkar -->
-        <a class="active" href="#music">Music</a>
-        <a href="#contact">Contact</a>
-        <a href="#shows">Shows</a>
-        <a href="#about">About</a>
-        <button class="merch-button">MERCH</button>
+      <a href="#" class="logo">
+        <img src="assets/Assets/Logotype/Valvet - Brand Book - Logotype White.png" alt="Valvet logotyp">
+      </a>
+      <button class="hamburger" aria-label="Open menu">&#9776;</button>
+  
+      <div class="mobile-menu">
+        <div class="socials">
+          <a href="https://open.spotify.com/artist/DIN_ARTIST_ID" target="_blank" class="fa fa-spotify"></a>
+          <a href="https://instagram.com/valvet_music" target="_blank" class="fa fa-instagram"></a>
+          <a href="https://www.tiktok.com/@valvet_music" target="_blank" class="social-icon">...</a>
+          <a href="https://youtube.com/@valvet_music" target="_blank" class="fa fa-youtube"></a>
+          <a href="mailto:valvetbandet@gmail.com" class="fa fa-envelope"></a>
+        </div>
+        <nav class="nav-links">
+          <a href="#music">Music</a>
+          <a href="#contact">Contact</a>
+          <a href="#shows">Shows</a>
+          <a href="#about">About</a>
+          <button class="merch-button">MERCH</button>
+        </nav>
       </div>
-      
-     
     </div>
 
+    <section class="mobile-hero">
+      <div class="press-block">
+        <img src="images/Utvalda/DSCF4467.jpg" alt="Pressbild 1">
+        <div class="overlay-text">WE</div>
+      </div>
+      <div class="press-block">
+        <img src="images/Utvalda/DSCF4489.jpg" alt="Pressbild 2">
+        <div class="overlay-text">ARE</div>
+      </div>
+      <div class="press-block">
+        <img src="images/Utvalda/DSCF4374.jpg" alt="Pressbild 3">
+        <div class="overlay-text">VALVET</div>
+      </div>
+    </section>
 
     <div class="main-heading">
-      <h1><span id="HELLO_THIS_IS_MY_FIRST_HEADER-3">WE ARE VALVET</span></h1>
+      <h1>WE ARE VALVET</h1>
     </div>
-</header>
+  </header>
+  
 
 
 
-    <p>
-        WORK IN PROGRESS
-    </p>
 
+<section class="music-section" id="music">
+  <h1>LISTEN TO US</h1>
+  
+  <div class="music-embed">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0GaQfWxvx0mnE6yYp6mphA?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <div class="music-embed">
+    <iframe width="100%" height="152" src="https://youtu.be/JnHU4PcaB_s?si=EbwO0l3JIDjzssUE" allowfullscreen></iframe>
+  </div>
+</section>
+  
 
 
 <footer>
@@ -52,6 +78,24 @@
     Kåpirajt 2025 VALVET
   </p>
 </footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
+
+  const menuLinks = document.querySelectorAll('.nav-links a');
+
+  menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 
 
