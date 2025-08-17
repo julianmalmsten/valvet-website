@@ -11,34 +11,60 @@
 
 <body>
   <header>
-    <div class="header">
-      <a href="#" class="logo">
-        <img src="assets/Assets/Logotype/Valvet - Brand Book - Logotype White.png" alt="Valvet logotyp">
-      </a>
-      <button class="hamburger" aria-label="Open menu">&#9776;</button>
-  
-      <div class="mobile-menu">
-        <div class="socials">
-          <a href="https://open.spotify.com/artist/7Iq3Gerkgwtz65ToWA2OBq?si=VbVOHfMMTjeHtLeNJkBooQ" target="_blank" class="fa fa-spotify"></a>
-          <a href="https://instagram.com/valvet_music" target="_blank" class="fa fa-instagram"></a>
-          <a href="https://www.tiktok.com/@valvet_music" target="_blank" class="social-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="white">
-              <path d="M224 80.1c-19.6 0-36.8-11.2-45.3-27.5v88.5c0 39.7-32.2 71.9-71.9 71.9S35 180.8 35 141.1s32.2-71.9 71.9-71.9c3.8 0 7.6.3 11.2 1v27.7c-3.6-.9-7.4-1.4-11.2-1.4-24.5 0-44.4 19.9-44.4 44.4s19.9 44.4 44.4 44.4 44.4-19.9 44.4-44.4V32.2h27.5c5.7 26.2 28.8 45.9 56.2 45.9V80.1z"/>
-            </svg>
-          </a>
-          <a href="https://youtube.com/@valvet_music" target="_blank" class="fa fa-youtube"></a>
-          <a href="mailto:valvetbandet@gmail.com" class="fa fa-envelope"></a>
-        </div>
-        <nav class="nav-links">
-          <a href="#music">Music</a>
-          <a href="#contact">Contact</a>
-          <a href="#shows">Shows</a>
-          <a href="#about">About</a>
-          <a href="#merch">Merch</a>
-        </nav>
+  <div class="header">
+    <a href="#" class="logo">
+      <img src="assets/Assets/Logotype/Valvet - Brand Book - Logotype White.png" alt="Valvet logotyp">
+    </a>
+
+    <!-- DESKTOP NAV + ICONS -->
+    <div class="desktop-right" aria-label="Huvudmeny">
+      <nav class="desktop-nav-links">
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+        <a href="#shows">Shows</a>
+        <a href="#about">About</a>
+        <a href="#merch">Merch</a>
+      </nav>
+      <div class="desktop-socials">
+        <a href="https://open.spotify.com/artist/7Iq3Gerkgwtz65ToWA2OBq?si=VbVOHfMMTjeHtLeNJkBooQ" target="_blank" rel="noopener" class="fa fa-spotify" aria-label="Spotify"></a>
+        <a href="https://instagram.com/valvet_music" target="_blank" rel="noopener" class="fa fa-instagram" aria-label="Instagram"></a>
+        <a href="https://www.tiktok.com/@valvet_music" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" fill="white" aria-hidden="true">
+            <path d="M224 80.1c-19.6 0-36.8-11.2-45.3-27.5v88.5c0 39.7-32.2 71.9-71.9 71.9S35 180.8 35 141.1s32.2-71.9 71.9-71.9c3.8 0 7.6.3 11.2 1v27.7c-3.6-.9-7.4-1.4-11.2-1.4-24.5 0-44.4 19.9-44.4 44.4s19.9 44.4 44.4 44.4 44.4-19.9 44.4-44.4V32.2h27.5c5.7 26.2 28.8 45.9 56.2 45.9V80.1z"/>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@valvet_music" target="_blank" rel="noopener" class="fa fa-youtube" aria-label="YouTube"></a>
+        <a href="mailto:valvetbandet@gmail.com" class="fa fa-envelope" aria-label="Email"></a>
       </div>
     </div>
-  </header>
+
+    <!-- MOBIL: hamburgare -->
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
+
+    <!-- MOBIL: slideout-menyn (oförändrad) -->
+    <div class="mobile-menu">
+      <div class="socials">
+        <a href="https://open.spotify.com/artist/7Iq3Gerkgwtz65ToWA2OBq?si=VbVOHfMMTjeHtLeNJkBooQ" target="_blank" class="fa fa-spotify"></a>
+        <a href="https://instagram.com/valvet_music" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.tiktok.com/@valvet_music" target="_blank" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="white">
+            <path d="M224 80.1c-19.6 0-36.8-11.2-45.3-27.5v88.5c0 39.7-32.2 71.9-71.9 71.9S35 180.8 35 141.1s32.2-71.9 71.9-71.9c3.8 0 7.6.3 11.2 1v27.7c-3.6-.9-7.4-1.4-11.2-1.4-24.5 0-44.4 19.9-44.4 44.4s19.9 44.4 44.4 44.4 44.4-19.9 44.4-44.4V32.2h27.5c5.7 26.2 28.8 45.9 56.2 45.9V80.1z"/>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@valvet_music" target="_blank" class="fa fa-youtube"></a>
+        <a href="mailto:valvetbandet@gmail.com" class="fa fa-envelope"></a>
+      </div>
+      <nav class="nav-links">
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+        <a href="#shows">Shows</a>
+        <a href="#about">About</a>
+        <a href="#merch">Merch</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
   
   <section class="hero" id="home">
   <div class="press-block pos-a">
@@ -79,6 +105,9 @@
   <h1>CONTACT US</h1>
   <p>Mail us at <a href="mailto:valvetbandet@gmail.com">valvetbandet@gmail.com</a></p>
   <p>Or follow us on social media!</p>
+  <h2>Want to know more about our single?</h2>
+  <p><a href="https://drive.google.com/drive/folders/1vQ61cAfGx7bB0f4OWU1RRbM2DqpxMK_F?usp=sharing" target="_blank">Here</a>
+   is our EPK (Electronic Press Kit) for our most recent single "Mountains"</p>
 </section>
 
 <section class="shows-section" id="shows">
@@ -94,19 +123,32 @@
     </thead>
     <tbody>
       <tr>
-        <td>2024-09-15 20:00</td>
-        <td>Lund, Mejeriet</td>
-        <td>Release Party</td>
+        <td>2025-09-19 20:00</td>
+        <td>
+        <a href="https://maps.app.goo.gl/bZJXe5kcHHfggKjBA" target="_blank">Lund, AF-Borgen</a>
+        </td>
+        <td>LUPEF</td>
       </tr>
       <tr>
-        <td>2024-10-05 19:30</td>
-        <td>Malmö, Babel</td>
-        <td>Autumn Tour</td>
+        <td>2025-09-20 21:45</td>
+        <td>
+        <a href="https://maps.app.goo.gl/VmGEWMVdsX7Z1dHu6" target="_blank">Lund, Mårtenstorget</a>
+        </td>
+        <td>Kulturnatten lilla scenen</td>
       </tr>
       <tr>
-        <td>2024-11-12 21:00</td>
-        <td>Stockholm, Debaser</td>
-        <td>Valvet Live</td>
+        <td>2025-09-20 23:00</td>
+        <td>
+        <a href="https://maps.app.goo.gl/bd98TvcV8a4mKG869" target="_blank">Lund, Vintage Vinyl Records</a>
+        </td>
+        <td>Kulturnatten</td>
+      </tr>
+      <tr>
+        <td>2025-10-04 20:00</td>
+        <td>
+        <a href="https://maps.app.goo.gl/bZJXe5kcHHfggKjBA" target="_blank">Lund, AF-Borgen</a>
+        </td>
+        <td>Helsingkrona Nation</td>
       </tr>
     </tbody>
   </table>

@@ -104,7 +104,6 @@ body {
     filter: saturate(1.03);
   }
 
-  /* ==== Desktoplayout ==== */
   @media (min-width: 768px) {
     .hero {
       display: grid;
@@ -156,7 +155,7 @@ header {
     backdrop-filter: blur(4px);
   }
   
-  
+  .desktop-right { display: none; }
   
   .hero-image {
     background-image: url('images/Utvalda/DSCF4435.jpg');
@@ -314,6 +313,16 @@ header {
   .shows-table tr:nth-child(odd) {
     background-color: #2a2a2a;
   }
+
+  .shows-table a {
+    color: #e5c045;       /* din brand-färg */
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .shows-table a:hover {
+    text-decoration: underline;
+  }
   
   .about-section {
     background-color: #1a1a1a; /* annan färg än Shows */
@@ -380,7 +389,61 @@ header {
     text-decoration: underline;
   }
   
-  
+  @media (min-width: 768px) {
+  .hamburger { display: none; }                 /* göm hamburgaren */
+  .mobile-menu { display: none !important; }    /* göm mobilmenyn */
+
+  .desktop-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;              /* avstånd mellan nav och ikoner */
+    margin-left: auto;      /* tryck allt till höger */
+  }
+
+  .desktop-nav-links {
+    display: flex;
+    gap: 18px;
+  }
+  .desktop-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .desktop-nav-links a:hover {
+    color: #e5c045;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .desktop-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 6px;
+    padding-left: 12px;
+    border-left: 1px solid rgba(255,255,255,0.15);
+  }
+  .desktop-socials .fa,
+  .desktop-socials .social-icon svg {
+    font-size: 18px; /* för fa-ikoner */
+    width: 18px;     /* för svg */
+    height: 18px;
+    transition: transform 0.15s, opacity 0.15s;
+    opacity: 0.9;
+  }
+  .desktop-socials a { color: white; text-decoration: none; }
+  .desktop-socials a:hover .fa,
+  .desktop-socials a:hover svg {
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+
+  /* Justera logon lite mindre på desktop om du vill */
+  .header img { width: 140px; }
+}
 
   @media (max-width: 768px) {
     
