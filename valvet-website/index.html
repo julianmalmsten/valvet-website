@@ -84,20 +84,11 @@
 
 
 
-<section class="music-section" id="music">
-  <h1>LISTEN TO US</h1>
-  
-  <div class="music-embed">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0GaQfWxvx0mnE6yYp6mphA?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-
-  <div class="music-embed">
-    <iframe width="100%" height="152" 
-      src="https://www.youtube.com/embed/JnHU4PcaB_s" 
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+<section class="music-section ep-out-now">
+  <div>
+    <h2>Mirrors and Ecstacy — Out Friday</h2>
+    <p>Listen now on your favorite platforms.</p>
+    <!-- optional: add CTA buttons / embed here -->
   </div>
 </section>
   
@@ -105,9 +96,9 @@
   <h1>CONTACT US</h1>
   <p>Mail us at <a href="mailto:valvetbandet@gmail.com">valvetbandet@gmail.com</a></p>
   <p>Or follow us on social media!</p>
-  <h2>Want to know more about our single?</h2>
-  <p><a href="https://drive.google.com/drive/folders/1vQ61cAfGx7bB0f4OWU1RRbM2DqpxMK_F?usp=sharing" target="_blank">Here</a>
-   is our EPK (Electronic Press Kit) for our most recent single "Mountains"</p>
+  <h2>Want to know more about our EP?</h2>
+  <p><a href="https://drive.google.com/drsive/folders/1sAsh7Vz2zc8fwpVGvBQmbdSoMMlN5azT?usp=sharing" target="_blank">Here</a>
+   is our EPK (Electronic Press Kit) for our most recent EP "Mirrors & Ecstasy"</p>
 </section>
 
 <section class="shows-section" id="shows">
@@ -123,20 +114,6 @@
     </thead>
     <tbody>
       <tr>
-        <td>2025-09-19 20:00</td>
-        <td>
-        <a href="https://maps.app.goo.gl/bZJXe5kcHHfggKjBA" target="_blank">Lund, AF-Borgen</a>
-        </td>
-        <td>LUPEF</td>
-      </tr>
-      <tr>
-        <td>2025-09-20 21:45</td>
-        <td>
-        <a href="https://maps.app.goo.gl/VmGEWMVdsX7Z1dHu6" target="_blank">Lund, Mårtenstorget</a>
-        </td>
-        <td>Kulturnatten lilla scenen</td>
-      </tr>
-      <tr>
         <td>2025-09-20 23:00</td>
         <td>
         <a href="https://maps.app.goo.gl/bd98TvcV8a4mKG869" target="_blank">Lund, Vintage Vinyl Records</a>
@@ -149,6 +126,13 @@
         <a href="https://maps.app.goo.gl/bZJXe5kcHHfggKjBA" target="_blank">Lund, AF-Borgen</a>
         </td>
         <td>Helsingkrona Nation</td>
+      </tr>
+      <tr>
+        <td>2026-??-?? ??:??</td>
+        <td>
+        <a href="https://maps.app.goo.gl/bZJXe5kcHHfggKjBA" target="_blank">Din scen?</a>
+        </td>
+        <td>Kontakta oss gärna!</td>
       </tr>
     </tbody>
   </table>
@@ -205,22 +189,58 @@
 
 
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Add ep background element (keeps HTML untouched)
+  const ep = document.querySelector('.ep-out-now');
+  if (ep && !ep.querySelector('.ep-bg')) {
+    const bg = document.createElement('div');
+    bg.className = 'ep-bg';
+    ep.insertBefore(bg, ep.firstChild);
+
+    function onMove(clientX, clientY) {
+      const rect = ep.getBoundingClientRect();
+      const x = (clientX - rect.left) / rect.width - 0.5; // -0.5 .. 0.5
+      const y = (clientY - rect.top) / rect.height - 0.5;
+      const moveX = -x * Math.max(12, rect.width * 0.02); // px
+      const moveY = -y * Math.max(8, rect.height * 0.015);
+      bg.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) scale(1.05)`;
+    }
+
+    ep.addEventListener('mousemove', function(e) {
+      onMove(e.clientX, e.clientY);
+    });
+    ep.addEventListener('mouseleave', function() {
+      const bg = ep.querySelector('.ep-bg');
+      if (bg) bg.style.transform = 'translate3d(0,0,0) scale(1.02)';
+    });
+
+    // Touch support (less aggressive)
+    ep.addEventListener('touchmove', function(e) {
+      if (!e.touches || !e.touches[0]) return;
+      onMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, {passive: true});
+  }
+
+  // Hamburger toggle for mobile menu (uses .active class)
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
-
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-  });
-
-  const menuLinks = document.querySelectorAll('.nav-links a');
-
-  menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('active');
     });
-  });
+
+    // close when clicking outside the menu
+    document.addEventListener('click', function(e) {
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+      }
+    });
+  }
+});
 </script>
 
 </body>
+</html>
 
 
