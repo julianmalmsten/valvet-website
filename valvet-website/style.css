@@ -107,7 +107,7 @@ body {
     .hero {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      height: 70vh;                 /* en gemensam höjd */
+      height: 93vh;                 /* en gemensam höjd */
       min-height: 520px;
     }
     .press-block { min-height: unset; }
